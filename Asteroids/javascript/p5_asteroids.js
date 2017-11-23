@@ -1,8 +1,9 @@
 var keys = [0, 0, 0];		//Array of values to be entered into movement functions
 
+var ship;		//Player Ship
 function setup() {
 	createCanvas(600, 600);		//Creates Canvas
-	var ship = new ship();
+	ship = new Ship();
 }
 
 function draw() {
@@ -40,7 +41,7 @@ function toRad(angle) {
 	return angle * (Math.PI/180);
 }
 
-function ship() {
+function Ship() {
 	this.pos = createVector(width/2, height/2);		//Vector for center of traingle
 	this.radius = 5;
 	this.angle = 90;
